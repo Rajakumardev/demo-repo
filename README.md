@@ -364,7 +364,8 @@ A **pre-commit hook** (Husky) guards every commit:
    test suites **with enforced 85% coverage thresholds**. Coverage is measured
    by `c8` (backend) and Vitest (frontend).
 
-If anything fails, the commit is rejected.
+If anything fails, the commit is rejected. Use `git commit --no-verify` only in an
+emergency (for example, a hotfix being prepared while the suite is red).
 
 ### One-time setup
 
