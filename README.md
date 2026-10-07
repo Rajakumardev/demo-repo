@@ -337,16 +337,59 @@ filename order.
 
 **backend**
 
-| Script           | Description                          |
-| ---------------- | ------------------------------------ |
-| `npm run dev`    | Start with `node --watch`            |
-| `npm start`      | Start the server                     |
-| `npm run migrate`| Apply pending migrations and exit    |
+| Script                 | Description                                    |
+| ---------------------- | ---------------------------------------------- |
+| `npm run dev`          | Start with `node --watch`                       |
+| `npm start`            | Start the server                                |
+| `npm run migrate`      | Apply pending migrations and exit               |
+| `npm test`             | Run the unit tests (`node --test`)              |
+| `npm run test:coverage`| Run tests with `c8`, enforcing an 85% threshold |
 
 **frontend**
 
-| Script            | Description                          |
-| ----------------- | ------------------------------------ |
-| `npm run dev`     | Vite dev server                      |
-| `npm run build`   | Production build to `dist/`          |
-| `npm run preview` | Preview the production build         |
+| Script                 | Description                              |
+| ---------------------- | ---------------------------------------- |
+| `npm run dev`          | Vite dev server                          |
+| `npm run build`        | Production build to `dist/`              |
+| `npm run preview`      | Preview the production build             |
+| `npm test`             | Run the unit tests (`vitest run`)        |
+| `npm run test:coverage`| Run tests with coverage (85% threshold)  |
+
+## Git hooks & quality gates
+
+A **pre-commit hook** (Husky) guards every commit:
+
+1. `lint-staged` lints and auto-fixes the files staged for the commit.
+2. `npm run verify` runs the repo linter and then the full backend and frontend
+   test suites **with enforced 85% coverage thresholds**. Coverage is measured
+   by `c8` (backend) and Vitest (frontend).
+
+If anything fails, the commit is rejected.
+
+### One-time setup
+
+Install dependencies at the repo root, in the backend and in the frontend:
+
+```bash
+npm install                 # sets up Husky (via the `prepare` script)
+npm --prefix backend install
+npm --prefix frontend install
+```
+
+### Root scripts
+
+Run from the repository root:
+
+| Script                  | Description                                             |
+| ----------------------- | ------------------------------------------------------- |
+| `npm run lint`          | ESLint across `backend/src` and `frontend/src`          |
+| `npm run lint:fix`      | ESLint with `--fix`                                     |
+| `npm test`              | Unit tests for backend and frontend                     |
+| `npm run coverage`      | Test suites with coverage + thresholds (both packages)  |
+| `npm run verify`        | `lint` + `coverage` — exactly what the hook runs        |
+
+> Coverage scope: the backend enforces 85% over `backend/src` (excluding the
+> `server.js` entrypoint). The frontend enforces 85% over the unit-testable
+> surface `frontend/src/{lib,context,components}`; page-level UI is not yet
+> covered. Widen the `coverage.include` list in `frontend/vite.config.js` as
+> page tests are added.

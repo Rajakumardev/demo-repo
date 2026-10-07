@@ -6,6 +6,29 @@ import react from '@vitejs/plugin-react';
 // proxying (see frontend/nginx.conf).
 export default defineConfig({
   plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./src/test/setup.js'],
+    include: ['src/**/*.{test,spec}.{js,jsx}'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text-summary'],
+      // The unit-testable logic surface: helpers, auth context and components.
+      // Page-level UI is exercised separately and excluded here.
+      include: [
+        'src/lib/**/*.{js,jsx}',
+        'src/context/**/*.{js,jsx}',
+        'src/components/**/*.{js,jsx}',
+      ],
+      exclude: ['src/**/*.{test,spec}.{js,jsx}', 'src/test/**'],
+      thresholds: {
+        lines: 85,
+        functions: 85,
+        branches: 85,
+        statements: 85,
+      },
+    },
+  },
   server: {
     host: true,
     port: 5173,

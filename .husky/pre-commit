@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+# Runs before every commit. Blocks the commit unless linting, unit tests and
+# coverage all succeed for the backend and the frontend.
+#
+#   npx lint-staged  — lints and auto-fixes the files staged for this commit
+#   npm run verify   — lints the whole repo, then runs the full test suites
+#                      with enforced coverage thresholds
+
+set -e
+
+npx lint-staged
+
+npm run verify

@@ -74,15 +74,21 @@ docker-compose.yml  .env.example  README.md  AGENTS.md
 | -------------------------- | ---------------------------------------------- |
 | Start the whole stack      | `docker compose up --build`                    |
 | Backend dev                | `cd backend && npm run dev`                    |
-| Backend tests + coverage   | `cd backend && npm test -- --coverage`         |
+| Backend tests + coverage   | `cd backend && npm run test:coverage`          |
 | Frontend dev               | `cd frontend && npm run dev`                   |
 | Frontend build             | `cd frontend && npm run build`                 |
-| Frontend tests + coverage  | `cd frontend && npm test -- --coverage`        |
+| Frontend tests + coverage  | `cd frontend && npm run test:coverage`         |
 | Apply DB migrations        | `cd backend && npm run migrate`                |
+| Lint + tests + coverage    | `npm run verify` (from the repo root)          |
 
 > Testing tooling: the backend uses Node's built-in test runner
 > (`node --test`) and the frontend uses Vitest. If the scripts above are not
 > present yet, wire them up **before** adding the first feature under rule 1.
+
+A Husky **pre-commit hook** enforces rule 1 automatically: it runs
+`npm run verify` (ESLint + both test suites with 85% coverage thresholds) and
+rejects the commit if anything fails. Activate it once per clone with
+`npm install` at the repository root.
 
 ## Code conventions
 
