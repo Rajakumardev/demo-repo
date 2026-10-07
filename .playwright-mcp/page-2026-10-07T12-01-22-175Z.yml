@@ -1,0 +1,79 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e22]:
+    - complementary [ref=e23]:
+      - generic [ref=e24]: Expense Manager
+      - navigation [ref=e30]:
+        - link "Dashboard" [ref=e31] [cursor=pointer]:
+          - /url: /
+        - link "Expenses" [ref=e38] [cursor=pointer]:
+          - /url: /expenses
+        - link "Categories" [ref=e43] [cursor=pointer]:
+          - /url: /categories
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: G
+          - generic [ref=e52]:
+            - strong [ref=e53]: Grace Hopper
+            - generic [ref=e54]: grace@example.com
+        - button "Sign out" [ref=e55] [cursor=pointer]
+    - main [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e63]:
+          - heading "Welcome, Grace" [level=1] [ref=e64]
+          - paragraph [ref=e65]: Your spending overview for October 2026.
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68]: Spent this month
+            - generic [ref=e72]: US$1,242.75
+          - generic [ref=e73]:
+            - generic [ref=e74]: Transactions
+            - generic [ref=e78]: "2"
+          - generic [ref=e79]:
+            - generic [ref=e80]: Average
+            - generic [ref=e84]: US$621.38
+          - generic [ref=e85]:
+            - generic [ref=e86]: Largest
+            - generic [ref=e90]: US$1,200.00
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - heading "Monthly trend" [level=2] [ref=e94]
+              - generic [ref=e95]: last 6 months
+            - generic [ref=e99]:
+              - img [ref=e100]:
+                - generic [ref=e103]: Oct 26
+                - generic [ref=e108]:
+                  - generic [ref=e109]: "0"
+                  - generic [ref=e111]: "350"
+                  - generic [ref=e113]: "700"
+                  - generic [ref=e115]: "1050"
+                  - generic [ref=e117]: "1400"
+              - generic:
+                - generic:
+                  - paragraph: Oct 26
+                  - list:
+                    - listitem: "total : US$1,242.75"
+          - generic [ref=e125]:
+            - heading "By category" [level=2] [ref=e126]
+            - generic [ref=e127]: this month
+        - generic [ref=e133]:
+          - heading "Recent expenses" [level=2] [ref=e135]
+          - table [ref=e137]:
+            - rowgroup [ref=e138]:
+              - row [ref=e139]:
+                - columnheader "Date" [ref=e140]
+                - columnheader "Description" [ref=e141]
+                - columnheader "Category" [ref=e142]
+                - columnheader "Amount" [ref=e143]
+            - rowgroup [ref=e144]:
+              - row [ref=e145]:
+                - cell "5 Oct 2026" [ref=e146]
+                - cell "Team lunch" [ref=e147]
+                - cell "Travel" [ref=e148]
+                - cell "US$42.75" [ref=e151]
+              - row [ref=e152]:
+                - cell "1 Oct 2026" [ref=e153]
+                - cell "Rent" [ref=e154]
+                - cell "Uncategorised" [ref=e155]
+                - cell "US$1,200.00" [ref=e156]
+  - generic [aria-hidden] [ref=e157]: "0"

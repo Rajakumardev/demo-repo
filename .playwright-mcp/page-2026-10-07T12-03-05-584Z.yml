@@ -1,0 +1,67 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e22]:
+    - complementary [ref=e23]:
+      - generic [ref=e24]: Expense Manager
+      - navigation [ref=e30]:
+        - link "Dashboard" [ref=e31] [cursor=pointer]:
+          - /url: /
+        - link "Expenses" [ref=e38] [cursor=pointer]:
+          - /url: /expenses
+        - link "Categories" [ref=e43] [cursor=pointer]:
+          - /url: /categories
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: G
+          - generic [ref=e52]:
+            - strong [ref=e53]: Grace Hopper
+            - generic [ref=e54]: grace@example.com
+        - button "Sign out" [ref=e55] [cursor=pointer]
+    - main [ref=e60]:
+      - generic [ref=e338]:
+        - generic [ref=e339]:
+          - generic [ref=e340]:
+            - heading "Categories" [level=1] [ref=e341]
+            - paragraph [ref=e342]: Group your spending the way you think about it.
+          - button "Add category" [ref=e343] [cursor=pointer]
+        - generic [ref=e346]:
+          - generic [ref=e347]:
+            - generic [ref=e348]: Bills & Utilities
+            - generic [ref=e354]:
+              - button "Edit Bills & Utilities" [ref=e355] [cursor=pointer]
+              - button "Delete Bills & Utilities" [ref=e359] [cursor=pointer]
+          - generic [ref=e363]:
+            - generic [ref=e364]: Entertainment
+            - generic [ref=e369]:
+              - button "Edit Entertainment" [ref=e370] [cursor=pointer]
+              - button "Delete Entertainment" [ref=e374] [cursor=pointer]
+          - generic [ref=e378]:
+            - generic [ref=e379]: Food & Dining
+            - generic [ref=e385]:
+              - button "Edit Food & Dining" [ref=e386] [cursor=pointer]
+              - button "Delete Food & Dining" [ref=e390] [cursor=pointer]
+          - generic [ref=e394]:
+            - generic [ref=e395]: Health
+            - generic [ref=e401]:
+              - button "Edit Health" [ref=e402] [cursor=pointer]
+              - button "Delete Health" [ref=e406] [cursor=pointer]
+          - generic [ref=e410]:
+            - generic [ref=e411]: Other
+            - generic [ref=e417]:
+              - button "Edit Other" [ref=e418] [cursor=pointer]
+              - button "Delete Other" [ref=e422] [cursor=pointer]
+          - generic [ref=e426]:
+            - generic [ref=e427]: Shopping
+            - generic [ref=e433]:
+              - button "Edit Shopping" [ref=e434] [cursor=pointer]
+              - button "Delete Shopping" [ref=e438] [cursor=pointer]
+          - generic [ref=e442]:
+            - generic [ref=e443]: Transport
+            - generic [ref=e450]:
+              - button "Edit Transport" [ref=e451] [cursor=pointer]
+              - button "Delete Transport" [ref=e455] [cursor=pointer]
+          - generic [ref=e459]:
+            - generic [ref=e460]: Travel
+            - generic [ref=e465]:
+              - button "Edit Travel" [ref=e466] [cursor=pointer]
+              - button "Delete Travel" [ref=e470] [cursor=pointer]
+  - generic [aria-hidden] [ref=e157]: "0"

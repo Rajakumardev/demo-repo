@@ -1,0 +1,120 @@
+- generic [ref=e1]:
+  - generic [ref=e22]:
+    - complementary [ref=e23]:
+      - generic [ref=e24]: Expense Manager
+      - navigation [ref=e30]:
+        - link "Dashboard" [ref=e31] [cursor=pointer]:
+          - /url: /
+        - link "Expenses" [ref=e38] [cursor=pointer]:
+          - /url: /expenses
+        - link "Categories" [ref=e43] [cursor=pointer]:
+          - /url: /categories
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: G
+          - generic [ref=e52]:
+            - strong [ref=e53]: Grace Hopper
+            - generic [ref=e54]: grace@example.com
+        - button "Sign out" [ref=e55] [cursor=pointer]
+    - main [ref=e60]:
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - heading "Expenses" [level=1] [ref=e169]
+            - paragraph [ref=e170]: Track and manage your transactions.
+          - button "Add expense" [ref=e171] [cursor=pointer]
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - generic [ref=e175]:
+              - generic [ref=e176]: Search
+              - searchbox "Search" [ref=e181]
+            - generic [ref=e182]:
+              - generic [ref=e183]: Category
+              - combobox "Category" [ref=e184]:
+                - option "All categories" [selected]
+                - option "Bills & Utilities"
+                - option "Entertainment"
+                - option "Food & Dining"
+                - option "Health"
+                - option "Other"
+                - option "Shopping"
+                - option "Transport"
+                - option "Travel"
+            - generic [ref=e185]:
+              - generic [ref=e186]: From
+              - textbox "From" [ref=e187]
+            - generic [ref=e188]:
+              - generic [ref=e189]: To
+              - textbox "To" [ref=e190]
+            - generic [ref=e191]:
+              - generic [ref=e192]: Sort
+              - combobox "Sort" [ref=e193]:
+                - option "Newest first" [selected]
+                - option "Oldest first"
+                - option "Highest amount"
+                - option "Lowest amount"
+          - table [ref=e195]:
+            - rowgroup [ref=e196]:
+              - row [ref=e197]:
+                - columnheader "Date" [ref=e198]
+                - columnheader "Description" [ref=e199]
+                - columnheader "Category" [ref=e200]
+                - columnheader "Amount" [ref=e201]
+                - columnheader "Actions" [ref=e202]
+            - rowgroup [ref=e203]:
+              - row [ref=e204]:
+                - cell "5 Oct 2026" [ref=e205]
+                - cell "Team lunch" [ref=e206]
+                - cell "Travel" [ref=e207]
+                - cell "US$42.75" [ref=e210]
+                - cell [ref=e211]:
+                  - generic [ref=e212]:
+                    - button "Edit expense" [ref=e213] [cursor=pointer]
+                    - button "Delete expense" [ref=e217] [cursor=pointer]
+              - row [ref=e221]:
+                - cell "1 Oct 2026" [ref=e222]
+                - cell "Rent" [ref=e223]
+                - cell "Uncategorised" [ref=e224]
+                - cell "US$1,200.00" [ref=e225]
+                - cell [ref=e226]:
+                  - generic [ref=e227]:
+                    - button "Edit expense" [ref=e228] [cursor=pointer]
+                    - button "Delete expense" [ref=e232] [cursor=pointer]
+          - generic [ref=e236]:
+            - generic [ref=e237]: 2 expenses · US$1,242.75
+            - generic [ref=e238]:
+              - button "Prev" [disabled] [ref=e239]
+              - generic [ref=e242]: Page 1 of 1
+              - button "Next" [disabled] [ref=e243]
+        - dialog "Add expense" [ref=e247]:
+          - generic [ref=e248]:
+            - heading "Add expense" [level=2] [ref=e249]
+            - button "Close" [ref=e250] [cursor=pointer]
+          - generic [ref=e254]:
+            - generic [ref=e255]:
+              - generic [ref=e256]:
+                - generic [ref=e257]: Amount
+                - spinbutton "Amount" [active] [ref=e258]
+              - generic [ref=e259]:
+                - generic [ref=e260]: Date
+                - textbox "Date" [ref=e261]: 2026-10-07
+            - generic [ref=e262]:
+              - generic [ref=e263]: Description
+              - textbox "Description" [ref=e264]:
+                - /placeholder: What was it for?
+            - generic [ref=e265]:
+              - generic [ref=e266]: Category
+              - combobox "Category" [ref=e267]:
+                - option "Uncategorised" [selected]
+                - option "Bills & Utilities"
+                - option "Entertainment"
+                - option "Food & Dining"
+                - option "Health"
+                - option "Other"
+                - option "Shopping"
+                - option "Transport"
+                - option "Travel"
+            - generic [ref=e268]:
+              - button "Cancel" [ref=e269] [cursor=pointer]
+              - button "Add expense" [ref=e270] [cursor=pointer]
+  - generic [aria-hidden] [ref=e157]: "0"

@@ -1,0 +1,98 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e22]:
+    - complementary [ref=e23]:
+      - generic [ref=e24]: Expense Manager
+      - navigation [ref=e30]:
+        - link "Dashboard" [ref=e31] [cursor=pointer]:
+          - /url: /
+        - link "Expenses" [ref=e38] [cursor=pointer]:
+          - /url: /expenses
+        - link "Categories" [ref=e43] [cursor=pointer]:
+          - /url: /categories
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: G
+          - generic [ref=e52]:
+            - strong [ref=e53]: Grace Hopper
+            - generic [ref=e54]: grace@example.com
+        - button "Sign out" [ref=e55] [cursor=pointer]
+    - main [ref=e60]:
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - heading "Expenses" [level=1] [ref=e169]
+            - paragraph [ref=e170]: Track and manage your transactions.
+          - button "Add expense" [ref=e171] [cursor=pointer]
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - generic [ref=e175]:
+              - generic [ref=e176]: Search
+              - searchbox "Search" [ref=e181]
+            - generic [ref=e182]:
+              - generic [ref=e183]: Category
+              - combobox "Category" [ref=e184]:
+                - option "All categories" [selected]
+                - option "Bills & Utilities"
+                - option "Entertainment"
+                - option "Food & Dining"
+                - option "Health"
+                - option "Other"
+                - option "Shopping"
+                - option "Transport"
+                - option "Travel"
+            - generic [ref=e185]:
+              - generic [ref=e186]: From
+              - textbox "From" [ref=e187]
+            - generic [ref=e188]:
+              - generic [ref=e189]: To
+              - textbox "To" [ref=e190]
+            - generic [ref=e191]:
+              - generic [ref=e192]: Sort
+              - combobox "Sort" [ref=e193]:
+                - option "Newest first" [selected]
+                - option "Oldest first"
+                - option "Highest amount"
+                - option "Lowest amount"
+          - table [ref=e272]:
+            - rowgroup [ref=e273]:
+              - row [ref=e274]:
+                - columnheader "Date" [ref=e275]
+                - columnheader "Description" [ref=e276]
+                - columnheader "Category" [ref=e277]
+                - columnheader "Amount" [ref=e278]
+                - columnheader "Actions" [ref=e279]
+            - rowgroup [ref=e280]:
+              - row [ref=e281]:
+                - cell "7 Oct 2026" [ref=e282]
+                - cell "Coffee beans" [ref=e283]
+                - cell "Uncategorised" [ref=e284]
+                - cell "US$9.99" [ref=e285]
+                - cell [ref=e286]:
+                  - generic [ref=e287]:
+                    - button "Edit expense" [ref=e288] [cursor=pointer]
+                    - button "Delete expense" [ref=e292] [cursor=pointer]
+              - row [ref=e296]:
+                - cell "5 Oct 2026" [ref=e297]
+                - cell "Team lunch" [ref=e298]
+                - cell "Travel" [ref=e299]
+                - cell "US$42.75" [ref=e302]
+                - cell [ref=e303]:
+                  - generic [ref=e304]:
+                    - button "Edit expense" [ref=e305] [cursor=pointer]
+                    - button "Delete expense" [ref=e309] [cursor=pointer]
+              - row [ref=e313]:
+                - cell "1 Oct 2026" [ref=e314]
+                - cell "Rent" [ref=e315]
+                - cell "Uncategorised" [ref=e316]
+                - cell "US$1,200.00" [ref=e317]
+                - cell [ref=e318]:
+                  - generic [ref=e319]:
+                    - button "Edit expense" [ref=e320] [cursor=pointer]
+                    - button "Delete expense" [ref=e324] [cursor=pointer]
+          - generic [ref=e328]:
+            - generic [ref=e329]: 3 expenses · US$1,252.74
+            - generic [ref=e330]:
+              - button "Prev" [disabled] [ref=e331]
+              - generic [ref=e334]: Page 1 of 1
+              - button "Next" [disabled] [ref=e335]
+  - generic [aria-hidden] [ref=e157]: "0"
