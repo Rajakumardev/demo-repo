@@ -193,6 +193,121 @@ button {
   font-weight: 500;
 }
 
+.field-help {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* Password input: show/hide toggle + live strength meter */
+
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 2.75rem;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.password-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.password-strength {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.password-strength-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.password-strength-bar {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.password-strength-bar.score-0 {
+  background: var(--border);
+}
+
+.password-strength-bar.score-1 {
+  background: var(--danger);
+}
+
+.password-strength-bar.score-2 {
+  background: #f59e0b;
+}
+
+.password-strength-bar.score-3 {
+  background: #0ea5e9;
+}
+
+.password-strength-bar.score-4 {
+  background: var(--success);
+}
+
+.password-strength-label {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.password-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.2rem 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.password-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.password-checklist li.is-met {
+  color: var(--success);
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

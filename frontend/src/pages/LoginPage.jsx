@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Wallet } from 'lucide-react';
+import PasswordField from '../components/PasswordField.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 
 export default function LoginPage() {
@@ -60,18 +61,15 @@ export default function LoginPage() {
             />
           </label>
 
-          <label className="field">
-            <span>Password</span>
-            <input
-              type="password"
-              name="password"
-              autoComplete="current-password"
-              value={form.password}
-              onChange={update}
-              placeholder="••••••••"
-              required
-            />
-          </label>
+          <PasswordField
+            label="Password"
+            name="password"
+            value={form.password}
+            onChange={update}
+            autoComplete="current-password"
+            placeholder="••••••••"
+            required
+          />
 
           <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
             {loading ? 'Signing in…' : 'Sign in'}
